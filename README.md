@@ -129,6 +129,7 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 
 ## Sonderzeichen
 Um Sonderzeichen in HTML einzufügen, reicht zu Zeiten von utf-8 (Kodierung für Unicode, eine Sammlung von Zeichen aller Sprachen &ndash; inkl. des asiatischen Raums) das simple einfügen des Zeichens über die Tastatur oder z.B. die Bildschirmtastatur, sollte dieses Zeichen nicht auf dem physikalischen Eingabe-Gerät vorhanden sein. Es gibt jedoch auch eine zweite, ebenso unterstütze Möglichkeit, der Einsatz von HTML-Entities. Diese stellen eine weitere Möglichkeit der Kodierung von Sonderzeichen da und werden von allen Browsern verstanden, an Stelle des Sonderzeichens wird einfach der HTML-Code eingefügt, der Browser übernimmt den Rest:
+
 |Sonderzeichen| HTML-Code |
 |--|--|
 | und (&) | `&amp;` |
@@ -136,7 +137,6 @@ Um Sonderzeichen in HTML einzufügen, reicht zu Zeiten von utf-8 (Kodierung für
 | ungefähr (&#8764;) | `&#8764;` |
 | von bis (12&ndash;15 mL) | `&ndash;` |
 | micro (&micro;) | `&micro;` |
-
 
 ## Übersicht über die Layout-`<div>`s
 `<div></div>`-Tags werden verwendet um Organisations- bzw. Layout-Abschnitte festzulegen. Das Layout innerhalb dieser Abschnitte kann über `css`-Befehle geändert werden, sodass am Ende jeder `<div></div>` mit einer bestimmten Klasse (z.B. `<div class="article_picture>INHALT</div>` immer dasselbe Layout ermöglicht. Einige praktische Layout-Klassen habe ich bereits vorbereitet, sollte etwas fehlen, fragt mich gerne und sagt mir was genau ihr braucht und ich gestalte diese.

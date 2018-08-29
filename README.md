@@ -34,7 +34,26 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 ><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 
 ***
+### Nummerierte und nicht-nummerierte Liste `<ol></ol>` und `<ul></ul>`
+- werden verwendet um Listen zu erstellen, die entweder fortlaufend nummeriert sind oder einen vorangstellten Aufzählungspunkt haben
+- `<ol>` für *ordered list* (nummeriert), `<ul>` für *unordered list* (nicht nummeriert)
 
+##### Beispiel
+
+```
+<ol>
+    <li>Eins</li>
+    <li>Zwei</li>
+    <li>Drei</li>
+</ol>
+
+<ul>
+    <li>Eins</li>
+    <li>Zwei</li>
+    <li>Drei</li>
+</ul>
+```
+![enter image description here](https://lh3.googleusercontent.com/HumqmteHRsrfF7Ucwtg7mfTRM0XlJi8_sKjogs7aQTAvn0B7q-OPBA4vn96eDqgDh3-i1qltgDSI2w "Nummerierte und nicht-nummerierte Liste")
 ### Zeilenumbruch `<br/>`
 
 - erzwingt einen Zeilenumbruch (vergleichbar mit `Shift + Enter` in Word)
@@ -96,7 +115,21 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 - alle Layout-`<div>`-Tags werden im nächsten Abschnitt erklärt
 
 ## Übersicht über die Layout-`<div>`s
-`<div></div>`-Tags werden verwendet um Organisations- bzw. Layout-Abschnitte festzulegen. Das Layout innerhalb dieser Abschnitte kann über `css`-Rules geändert werden, sodass am Ende jeder `<div class="layout-class">` mit einer bestimmten Klassenbezeichnung (layout-class) immer dasselbe Layout ermöglicht. Einige praktische Layout-Klassen habe ich bereits vorbereitet, sollte etwas fehlen, fragt mich gerne und sagt mir was genau ihr braucht und ich bau euch das.
+`<div></div>`-Tags werden verwendet um Organisations- bzw. Layout-Abschnitte festzulegen. Das Layout innerhalb dieser Abschnitte kann über `css`-Befehle geändert werden, sodass am Ende jeder `<div></div>` mit einer bestimmten Klasse (z.B. `<div class="article_picture>INHALT</div>` immer dasselbe Layout ermöglicht. Einige praktische Layout-Klassen habe ich bereits vorbereitet, sollte etwas fehlen, fragt mich gerne und sagt mir was genau ihr braucht und ich gestalte diese.
+
+### Überschriften mit gelber Box
+- diese Überschrift stellt eine nette Möglickeit dar eine stark hervorgehobene Überschrift in Roberts Stil zu verwenden
+
+##### Beispiel:
+```
+<div class="article_head-line">
+    <h2>head-line</h2>
+</div>
+```
+
+![](https://lh3.googleusercontent.com/-OXEMQWN-X6vPI_4kam7_mYUT2T3sit6R-oQne3SxWfsBaqWcYn_1aczcYAIzC9m-t7MsyU6Bn79RA "Überschrift mit gelber Box")
+
+***
 
 ### Bild mittig `<div class="article_picture></div>`
 - wird verwendet um Bilder zu zentrieren und ihnen eine linksbündige Bildunterschrift zu geben, die Bilder nehmen dabei standardmäßig 75% des verfügbaren Platzes ein
@@ -143,34 +176,115 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 ![](https://lh3.googleusercontent.com/q604dhuBXo1i1EHwOahV75CUf193EVuPwvlPj5g_G6IVV-hBh7GeyNrORb5a9Vnkhno2mPbZWdjzCg "Bild rechts")
 
 ***
+### Mehrere Bilder `<div class="article_multpicture">`
+
+- wird verwendet um zwei oder drei Bilder nebeneinander darzustellen
+- die Bildunterschriften sind optional und können weggelassen werden ohne das Layout zu verändern
+
+##### Beispiel
+```
+<div class="article_multpicture">
+    <div>
+        <div>
+            <img src="../../images/Notebook/notebook_sp1_070518.png">
+            <p>Unterschrift</p>
+        </div>
+        <div>
+            <img src="../../images/Notebook/notebook_168_070518.png">
+            <p>Unterschrift</p>
+        </div>
+    </div>
+    <p>Growth curves of the wild type SP1 and the 168 mutant, auxotrophic for tryptophan</p>
+</div>
+```
+![](https://lh3.googleusercontent.com/X96dTf9IyzWwGGGD5Obbi7_ia6OTp4tSUnucRkgaTYSBfpJhk1XoY6F4WCyOrI2fbGPhZB64ZjvyNQ "Mehrere Bilder")
+
+#### Zusatz
+- durch Hinzufügen des Klassen-Tags `class="article_multpicture-triple` können auch drei Bilder nebeneinander angeordnet werden
+
+##### Beispiel
+```
+<div class="article_multpicture article_multpicture-triple">
+    <div>
+        <div>
+            <img src="../../images/Notebook/notebook_sp1_070518.png">
+            <p>Unterschrift</p>
+        </div>
+        <div>
+            <img src="../../images/Notebook/notebook_168_070518.png">
+            <p>Unterschrift</p>
+        </div>
+         <div>
+            <img src="../../images/Notebook/notebook_168_070518.png">
+            <p>Unterschrift</p>
+        </div>
+    </div>
+    <p>Growth curves of the wild type SP1 and the 168 mutant, auxotrophic for tryptophan</p>
+</div>
+```
+
+***
 ### Tabellen `<div class="article_table"><div>`
 
 - wird verwendet um Tabellen jeglicher Art darzustellen
 - die Tabellen sind immer zentriert, die Schrift oberhalb der Tabelle
+##### Zusatzfunktionen:
+- an die `<th>` und `<td>`-Tags kann die Klasse `class="article-table_right"` angefügt werden, um den Text rechtsbündig anzuzeigen (wichtig bei Zahlen)
+- and die `<tr>`-Tags kann die Klasse `class="article_table_hline"` angefügt werden, um **oberhalb** der Tabellen-Reihe eine durchgezogene Linie zu erzeugen
 ##### Beispiel:
 ```
-<div class="article_table">
-    <p>Tabellenüberschrift</p>
+<div class="notebook-table article_table">
     <table>
-      <tr>
-        <th>One</th>
-        <th>Two</th>
-        <th>Three</th>
-        <th>Four</th>
-      </tr>
-      <tr>
-        <td>Agarose</td>
-        <td>agrobacterium tumefaciens</td>
-        <td>Testeintrag</td>
-        <td>Viel zu langer Testeintrag, der hoffentlich auf mehrere Zeilen gebunden wird</td>
-      </tr>
-      <tr>
-        <td>Test</td>
-        <td>saccharomyces cerevisiae</td>
-        <td>Testeintrag</td>
-        <td>Ebenfalls ein langer, aber nicht so langer Text.</td>
-      </tr>
+        <tr>
+            <th>Sample</th>
+            <th class="article-table_right">Reference sample</th>
+        </tr>
+        <tr>
+            <td>800&nbsp;&micro;L H<sub>2</sub>O</td>
+            <td>800&nbsp;&micro;L H<sub>2</sub>O</td>
+        </tr>
+        <tr>
+            <td>0.5, 1.0 &amp; 2.0&nbsp;&micro;L crude extract</td>
+            <td>no protein but equal volume of buffer</td>
+        </tr>
+        <tr>
+            <td>200&nbsp;&micro;L Bradford Solution</td>
+            <td>200&nbsp;&micro;L Bradford Solution</td>
+        </tr>
+        <tr>
+            <td>Sodium Succinate (30%)</td>
+            <td class="article-table_right">1</td>
+        </tr>
+        <tr>
+            <td>50% glucose</td>
+            <td class="article-table_right">0.5</td>
+        </tr>
+        <tr>
+            <td>(Tryptophan</td>
+            <td class="article-table_right">0.5)</td>
+        </tr>
+        <tr class="article_table_hline">
+            <td><strong>Ad to 50&nbsp;mL with sterile water</strong></td>
+            <td class="article-table_right">100</td>
+        </tr>
     </table>
-  </div>
+</div>
 ```
-![](https://lh3.googleusercontent.com/s2zsmFPkRUgmXMwIVIqopMkUK8_pYTQnWnxInHD4Z9TlDdJ8sxzZKeI4vEImtMqnVTAGeZdy4cFciA "Tabelle")
+![](https://lh3.googleusercontent.com/mw4Wo6dd9GUKRNGhNUsOuPoZPkglALozoRC2PVt00ZAa8yELtqMfTU2s50-bjkyTH6f0cfBtFuhjzQ "Tabelle")
+
+***
+
+### Formeln einfügen `<div class="article_formula">`
+- ermöglicht das Einfügen von Formeln, die vorher als PNG erstellt wurden (z.B. mit http://latex2png.com/)
+- die Formeln besitzen eine feste Höhe und sind Latex-ähnlich zentriert
+
+##### Beispiel
+```
+<div class="article_formula">
+    <img class="article_formula" src="PATH_TO_FORMULA">
+</div>
+```
+![](https://lh3.googleusercontent.com/zL0kMMH4v9p6uIHxYCRSjXyhNA8TOWy24C0dKKBTMH9IKukLDeAqSQ4AjvCtFtL0O5vzTM-99CiSsQ "Formel")
+
+
+

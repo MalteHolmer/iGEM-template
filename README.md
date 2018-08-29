@@ -34,6 +34,19 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 ><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 
 ***
+### Hochgestellt/ Tiefgestellt
+- zum Hochstellen `<sup></sup>`
+- zum Tiefstellen `<sub></sub>`
+
+##### Beispiel
+```
+<p>Dieser Text ist <sup>hochgestellt</sup></p>
+<p>Dieser Text ist <sub>tiefgestellt</sub></p>
+```
+> <p>Dieser Text ist <sup>hochgestellt</sup></p>
+> <p>Dieser Text ist <sub>tiefgestellt</sub></p>
+
+***
 ### Nummerierte und nicht-nummerierte Liste `<ol></ol>` und `<ul></ul>`
 - werden verwendet um Listen zu erstellen, die entweder fortlaufend nummeriert sind oder einen vorangstellten Aufzählungspunkt haben
 - `<ol>` für *ordered list* (nummeriert), `<ul>` für *unordered list* (nicht nummeriert)
@@ -114,6 +127,17 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 - Der `<img>`-Tag ermöglicht das Einfügen von Bildern. Damit diese die richtige Größe haben und die Bildunterschrift darunter linksbündig und mit vernünftigen Abständen dargestellt werden, müssen bestimmte Befehle in Form von `css`-Rules verwendet werden. Diese sind bereits geschrieben und können Global verändert werden. Es reicht daher den `<div class="article_picture">`-Tag zu verwenden bzw. andere `<div>`-Tags für andere Layouts
 - alle Layout-`<div>`-Tags werden im nächsten Abschnitt erklärt
 
+## Sonderzeichen
+Um Sonderzeichen in HTML einzufügen, reicht zu Zeiten von utf-8 (Kodierung für Unicode, eine Sammlung von Zeichen aller Sprachen &ndash; inkl. des asiatischen Raums) das simple einfügen des Zeichens über die Tastatur oder z.B. die Bildschirmtastatur, sollte dieses Zeichen nicht auf dem physikalischen Eingabe-Gerät vorhanden sein. Es gibt jedoch auch eine zweite, ebenso unterstütze Möglichkeit, der Einsatz von HTML-Entities. Diese stellen eine weitere Möglichkeit der Kodierung von Sonderzeichen da und werden von allen Browsern verstanden, an Stelle des Sonderzeichens wird einfach der HTML-Code eingefügt, der Browser übernimmt den Rest:
+|Sonderzeichen| HTML-Code |
+|--|--|
+| und (&) | `&amp;` |
+| geschütztes Leerzeichen | `&nbsp;` |
+| ungefähr (&#8764;) | `&#8764;` |
+| von bis (12&ndash;15 mL) | `&ndash;` |
+| micro (&micro;) | `&micro;` |
+
+
 ## Übersicht über die Layout-`<div>`s
 `<div></div>`-Tags werden verwendet um Organisations- bzw. Layout-Abschnitte festzulegen. Das Layout innerhalb dieser Abschnitte kann über `css`-Befehle geändert werden, sodass am Ende jeder `<div></div>` mit einer bestimmten Klasse (z.B. `<div class="article_picture>INHALT</div>` immer dasselbe Layout ermöglicht. Einige praktische Layout-Klassen habe ich bereits vorbereitet, sollte etwas fehlen, fragt mich gerne und sagt mir was genau ihr braucht und ich gestalte diese.
 
@@ -185,19 +209,20 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 ```
 <div class="article_multpicture">
     <div>
-        <div>
-            <img src="../../images/Notebook/notebook_sp1_070518.png">
-            <p>Unterschrift</p>
-        </div>
-        <div>
-            <img src="../../images/Notebook/notebook_168_070518.png">
-            <p>Unterschrift</p>
-        </div>
+      <div>
+        <img src=" http://2018.igem.org/wiki/images/1/14/T--Goettingen--Safety-autoclave.png " alt="autoclave ">
+      </div>
+      <div>
+        <img src="http://2018.igem.org/wiki/images/f/f5/T--Goettingen--Safety-eyeshower.png " alt="eyeShower ">
+      </div>
     </div>
-    <p>Growth curves of the wild type SP1 and the 168 mutant, auxotrophic for tryptophan</p>
-</div>
+    <div class="article_multpicture-paragraph">
+      <p>In this picture is the autoclave from our lab shown in which all created strains are autoclaved at 121°C for 20 min.</p>
+      <p>In this picture is the safety shower (above the blue door) and the eye shower (next to the sink) shown. They can be used if persons may catch fire or the eyes are hurt.</p>
+    </div>
+  </div>
 ```
-![](https://lh3.googleusercontent.com/X96dTf9IyzWwGGGD5Obbi7_ia6OTp4tSUnucRkgaTYSBfpJhk1XoY6F4WCyOrI2fbGPhZB64ZjvyNQ "Mehrere Bilder")
+![](https://lh3.googleusercontent.com/2Bqt4O6dt0yTwEQZZVzubfPPEuwLVUucZA23LXOjm74Qjsjq8mVom61K-PUAbBh8uB3aSVRwd_uWQg "Mehrere Bilder")
 
 #### Zusatz
 - durch Hinzufügen des Klassen-Tags `class="article_multpicture-triple` können auch drei Bilder nebeneinander angeordnet werden
@@ -205,23 +230,26 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 ##### Beispiel
 ```
 <div class="article_multpicture article_multpicture-triple">
+  <div>
     <div>
-        <div>
-            <img src="../../images/Notebook/notebook_sp1_070518.png">
-            <p>Unterschrift</p>
-        </div>
-        <div>
-            <img src="../../images/Notebook/notebook_168_070518.png">
-            <p>Unterschrift</p>
-        </div>
-         <div>
-            <img src="../../images/Notebook/notebook_168_070518.png">
-            <p>Unterschrift</p>
-        </div>
+      <img src=" http://2018.igem.org/wiki/images/1/14/T--Goettingen--Safety-autoclave.png " alt="autoclave ">
     </div>
-    <p>Growth curves of the wild type SP1 and the 168 mutant, auxotrophic for tryptophan</p>
+    <div>
+      <img src="http://2018.igem.org/wiki/images/f/f5/T--Goettingen--Safety-eyeshower.png " alt="eyeShower ">
+    </div>
+    <div>
+      <img src="http://2018.igem.org/wiki/images/f/f5/T--Goettingen--Safety-eyeshower.png " alt="eyeShower ">
+    </div>
+  </div>
+  <div class="article_multpicture-paragraph">
+    <p style="text-align: justify">In this picture is the autoclave from our lab shown in which all created strains are autoclaved at 121°C for 20 min.</p>
+    <p style="text-align: justify">In this picture is the safety shower (above the blue door) and the eye shower (next to the sink) shown. They can be used if persons may catch fire or the eyes are hurt.</p>
+    <p style="text-align: justify">In this picture is the safety shower (above the blue door) and the eye shower (next to the sink) shown. They can be used if persons may catch fire or the eyes are hurt.</p>
+  </div>
 </div>
 ```
+![](https://lh3.googleusercontent.com/bxh1hD0KeGuy8M3c2af-bC0HiHDd09AR_ROGRoXY1CMdk3AIXVgybRvqeAiBUgISucw11HSfRd0YWg "Mehrere Bilder")
+
 
 ***
 ### Tabellen `<div class="article_table"><div>`
@@ -285,6 +313,3 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 </div>
 ```
 ![](https://lh3.googleusercontent.com/zL0kMMH4v9p6uIHxYCRSjXyhNA8TOWy24C0dKKBTMH9IKukLDeAqSQ4AjvCtFtL0O5vzTM-99CiSsQ "Formel")
-
-
-

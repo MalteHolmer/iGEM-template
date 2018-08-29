@@ -549,7 +549,7 @@ body {
 }
 
 #bodyContent .article_picture p {
-  text-align: left;
+  text-align: justify;
   font-weight: bold;
   font-size: 0.8em;
 }
@@ -588,7 +588,7 @@ body {
 
 #bodyContent .article_multpicture p {
   width: 100%;
-  text-align: left;
+  text-align: justify;
   font-weight: bold;
   font-size: 0.8em;
   box-sizing: border-box;
@@ -599,7 +599,7 @@ body {
   object-fit: contain;
 }
 
-#bodyContent .article_multpicture-triple > div {
+#bodyContent .article_multpicture-triple > div > * {
   flex: 0 0 32%;
 }
 

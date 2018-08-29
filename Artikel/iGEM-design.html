@@ -1,48 +1,48 @@
 <div class="article">
-    <div class="article_head-line">
-        <h1>Design</h1>
-    </div>
-    <h2>Glyphosate detection system</h2>
-    <h4>Glyphosate resistance</h4>
-    <p>As described in the project description part, our topic is all about glyphosate. To create a proper detection system in <em>Bacillus&nbsp;subtilis</em>, we must know how this organism would behave upon glyphosate treatment. Therefore, we plated <em>B.&nbsp;subtilis</em> wildtype strain 168 on agar plates containing low amounts of glyphosate (2&nbsp;mM up to 10&nbsp;mM). We observed that the amount of colony forming units was strongly decreased on plates containing 2&nbsp;mM glyphosate, while there was no growth at higher concentrations. After three days of storing the plates at room temperature, suppressor mutants emerged. We sequenced the whole genome of these suppressor mutants and found many distinct mutations in the gene <em>gltT</em>. Those mutations lead to early stop codons and unfunctional proteins. Interestingly, <em>gltT</em> encodes for a glutamate transporter. The fact that in every suppressor mutant only one gene was mutated leads to the hypothesis that this glutamate transporter is also a glyphosate transporter. Further evolution of the isolated suppressor mutants lead to different mutations that occured in the gene <em>gltP</em>, which also encodes a glutamate transporter, albeit a less active one. (QUELLE?)
-    </p>
-    <h4>Reporter genes</h4>
-    <p>Since we planned to create a detection system we took a closer look at the biosynthesis pathway of the essential aromatic amino acids tryptophane, tyrosine, and phenylalanine. These amino acids are dependent on the activity of the EPSP-synthase, in <em>B.&nbsp;subtilis</em> encoded by the gene <em>aroE</em>. The EPSP-synthase converts phosphoenolpyruvate and 3-phosphoshikimate into 5-enolpyruvylshikimate-3-phosphate (EPSP) (Haslam, 1974). Glyphosate targets the EPSP-synthase and inhibits its activity (Franz, 1979; Schönbrunn <em>et al</em>., 2001). We made up the hypothesis that upon glyphosate treatment the biosynthesis of tryptophane is inhibited and the activity of genes, which are involved in the tryptophane biosynthesis downstream of <em>aroE</em>, are upregulated. We were particularly interested in <em>trpE</em> and <em>trpP</em>, encoding the first subunit of the anthranilate synthase and a tryptophane transporter, respectively (QUELLE!). A detection system should display the presence of the detected compound. Therefore, we cloned a <em>lacZ</em> reporter system behind the promoters of the two selected genes. The cells should show a blue color upon glyphosate treatment. We faced the problem that the cells did turn blue under normal conditions on minimal medium with and without glyphosate. Furthermore, <em>B.&nbsp;subtilis</em> did not survive the glyphosate treatment, since it had to take up glyphosate for detection.
-    </p>
-    <p>To avoid dying cells due to their disability to produce the essential aromatic amino acids, we thought about a resistant form of the EPSP-synthase. We found in Eschenburg <em>et al</em>., 2002 that a mutation at position 96 in the peptidechain from glycine to alanine provides a significant higher resistance against glyphosate. This resistant form should rescue the cells from their glyphosate sensitivity. However, this approach would not solve the problem with the blue cells without glyphosate treatment. <em><strong>Unfortunately, we were currently not able to clone this resistant form into Bacillus!</strong></em>
-    </p>
-    <p>After acquiring data from RNA sequencing, we changed our reporter system from <em>lacZ</em> to a xylose repressor system, in which the cells turn yellow, when there is glyphosate present. This principle is shown in the picture below.
-    </p>
-    <div class="article_picture">
-        <img src="images/xylose%20repressor%20reporter.png">
-        <p>The promotor of a gene that is downregulated upon glyphosate treatment is active without glyphosate. The xylose repressor <em>xylR</em> is therefore transcribed and the enzyme xylosidase is inactive. When there is glyphosate present, the promoter is downregulated and the xylose repressor <em>xylR</em> is not transcribed. This leads to the expression of the xylosidase which results in a color change.</p>
-    </div>
-    <p>The promoter of TO DO is upon glyphosate treatment 11-fold downregulated. Downstream of this promoter the xylosidase repressor <em>xylR</em> cloned. This would mean, if there is no glyphosate present, the xylosidase repressor is expressed and the xylosidase is not active. However, if glyphosate is present, the promoter is downregulated and so is the expression of the <em>xylR</em> gene. This leads to an active xylosidase that turns ONPX into a yellow color.
-    </p>
-    <p>With this detector we would also face the problem of dying cells, since they have to take up glyphosate for detection. Also, the formation of a glyphosate resistant <em>B.&nbsp;subtilis</em> via a resistant EPSP-synthase form would rescue this problem.
-    </p>
-    <h4>Fluorescence tagging</h4>
-    <p>Since we had problems to realize the <em>lacZ</em> reporter system, we came up with a new reporting system that does not use molecular switches. For this system, we tagged strains that differ in their glyphosate resistance with fluorophores. We used mTagBFP (blue fluorescent protein), GFP (green fluorescent protein), and mOrange (orange fluorescent protein) as markers, which were obtained from the iGEM DNA distribution kit. The detection system is based on a competition assay. Cells that have high glyphosate resistance TO DO are marked orange, cells with moderate glyphosate resistance are marked blue and cells that cannot survive glyphosate treatment are marked green. Grown in medium without glyphosate, all cells show the same fitness. However, grown in medium with glyphosate, only adapted cells would survive, which could be detected by measuring the fluorescence.
-    </p>
-    <div class="article_picture ">
-        <img src="images/iGEM_product.jpeg">
-        <p>This figure shows a possible application of our glyphosate detector. Fluorescence marked spores, in this case the green color indicates high glyphosate resistance, are propagated on a sample and cultivated. If there is a high glyphosate concentration within the sample, only the green marked cells can survive. If the glyphosate concentration is at a low level, the non-marked cells can survive, but are inhibited in their growth. When there is no glyphosate present, both strains will grow equally.</p>
-    </div>
-    <p>Such detection system as described in the figure above could also be used by customers, albeit the cells have to be observed with fluorescence detecting device. TO DO. Another option would be that customers could send their samples to a public laboratory company that uses our test kit for determining the glyphosate concentration.
-    </p>
-    <h4>Glyphosate degradation</h4>
-    <p>We conducted a survey and it brought our attention to another important topic within our project. People that are not into science questioned if it would be possible to degrade glyphosate with our detector-bacterium. To address this question, we searched in the literature for such a method and found in Castle&nbsp;et&nbsp;al.,&nbsp;2004 a solution: the glyphosate-acetyl-transferase (GAT) from <em>Bacillus&nbsp;licheniformis</em>. This enzyme N-acetylates glyphosate, which then has no herbicidal effect anymore (Franz et al.,&nbsp;1997). <em><strong>Unfortunately, we were currently not able to clone this resistant form into Bacillus!!!!</strong></em>
-    </p>
-    <hr>
-    <h2>References</h2>
-    <ol>
-        <li>Eschenburg, S., Healy, M.L., Priestman, M.A. et al. Planta (2002) 216: 129. https://doi.org/10.1007/s00425-002-0908-0</li>
-        <li>Franz, J.E. (1979) in: Adv. Pestic. Sci. Vol. 2, E. 139-147 (Geissbuehler, H. ed.) Pergamon, Oxford.
-        </li>
-        <li>Haslam, E. 1974 The Shikimate Pathway. Wiley, New York.
-        </li>
-        <li>Schönbrunn, E., Eschenburg, S., Shuttleworth, W.A., Schloss, J.V., Amrhein, N., Evans, J.N., and Kabsch, W. 2001. Interaction of the herbicide glyphosate with its target enzyme 5-enolpyruvylshikimate-3-phosphate synthase in atomic detail. <em>Proc Natl Acad Sci U S A </em> <strong>98: </strong>1376-80.
-        </li>
-    </ol>
+  <div class="article_head-line">
+    <h1>Design</h1>
+  </div>
+  <h2>Glyphosate detection system</h2>
+  <h4>Glyphosate resistance</h4>
+  <p>As described in the project description part, our topic is all about glyphosate. To create a proper detection system in <em>Bacillus&nbsp;subtilis</em>, we must know how this organism would behave upon glyphosate treatment. Therefore, we plated <em>B.&nbsp;subtilis</em> wildtype strain 168 on agar plates containing low amounts of glyphosate (2&nbsp;mM up to 10&nbsp;mM). We observed that the amount of colony forming units was strongly decreased on plates containing 2&nbsp;mM glyphosate, while there was no growth at higher concentrations. After three days of storing the plates at room temperature, suppressor mutants emerged. We sequenced the whole genome of these suppressor mutants and found many distinct mutations in the gene <em>gltT</em>. Those mutations lead to early stop codons and unfunctional proteins. Interestingly, <em>gltT</em> encodes for a glutamate transporter. The fact that in every suppressor mutant only one gene was mutated leads to the hypothesis that this glutamate transporter is also a glyphosate transporter. Further evolution of the isolated suppressor mutants lead to different mutations that occured in the gene <em>gltP</em>, which also encodes a glutamate transporter, albeit a less active one. (QUELLE?)
+  </p>
+  <h4>Reporter genes</h4>
+  <p>Since we planned to create a detection system we took a closer look at the biosynthesis pathway of the essential aromatic amino acids tryptophane, tyrosine, and phenylalanine. These amino acids are dependent on the activity of the EPSP-synthase, in <em>B.&nbsp;subtilis</em> encoded by the gene <em>aroE</em>. The EPSP-synthase converts phosphoenolpyruvate and 3-phosphoshikimate into 5-enolpyruvylshikimate-3-phosphate (EPSP) (Haslam, 1974). Glyphosate targets the EPSP-synthase and inhibits its activity (Franz, 1979; Schönbrunn <em>et al</em>., 2001). We made up the hypothesis that upon glyphosate treatment the biosynthesis of tryptophane is inhibited and the activity of genes, which are involved in the tryptophane biosynthesis downstream of <em>aroE</em>, are upregulated. We were particularly interested in <em>trpE</em> and <em>trpP</em>, encoding the first subunit of the anthranilate synthase and a tryptophane transporter, respectively (QUELLE!). A detection system should display the presence of the detected compound. Therefore, we cloned a <em>lacZ</em> reporter system behind the promoters of the two selected genes. The cells should show a blue color upon glyphosate treatment. We faced the problem that the cells did turn blue under normal conditions on minimal medium with and without glyphosate. Furthermore, <em>B.&nbsp;subtilis</em> did not survive the glyphosate treatment, since it had to take up glyphosate for detection.
+  </p>
+  <p>To avoid dying cells due to their disability to produce the essential aromatic amino acids, we thought about a resistant form of the EPSP-synthase. We found in Eschenburg <em>et al</em>., 2002 that a mutation at position 96 in the peptidechain from glycine to alanine provides a significant higher resistance against glyphosate. This resistant form should rescue the cells from their glyphosate sensitivity. However, this approach would not solve the problem with the blue cells without glyphosate treatment. <em><strong>Unfortunately, we were currently not able to clone this resistant form into Bacillus!</strong></em>
+  </p>
+  <p>After acquiring data from RNA sequencing, we changed our reporter system from <em>lacZ</em> to a xylose repressor system, in which the cells turn yellow, when there is glyphosate present. This principle is shown in the picture below.
+  </p>
+  <div class="article_picture">
+    <img src="http://2018.igem.org/wiki/images/c/c8/T--Goettingen--design-xylose_repressor_reporter.png">
+    <p>The promotor of a gene that is downregulated upon glyphosate treatment is active without glyphosate. The xylose repressor <em>xylR</em> is therefore transcribed and the enzyme xylosidase is inactive. When there is glyphosate present, the promoter is downregulated and the xylose repressor <em>xylR</em> is not transcribed. This leads to the expression of the xylosidase which results in a color change.</p>
+  </div>
+  <p>The promoter of TO DO is upon glyphosate treatment 11-fold downregulated. Downstream of this promoter the xylosidase repressor <em>xylR</em> cloned. This would mean, if there is no glyphosate present, the xylosidase repressor is expressed and the xylosidase is not active. However, if glyphosate is present, the promoter is downregulated and so is the expression of the <em>xylR</em> gene. This leads to an active xylosidase that turns ONPX into a yellow color.
+  </p>
+  <p>With this detector we would also face the problem of dying cells, since they have to take up glyphosate for detection. Also, the formation of a glyphosate resistant <em>B.&nbsp;subtilis</em> via a resistant EPSP-synthase form would rescue this problem.
+  </p>
+  <h4>Fluorescence tagging</h4>
+  <p>Since we had problems to realize the <em>lacZ</em> reporter system, we came up with a new reporting system that does not use molecular switches. For this system, we tagged strains that differ in their glyphosate resistance with fluorophores. We used mTagBFP (blue fluorescent protein), GFP (green fluorescent protein), and mOrange (orange fluorescent protein) as markers, which were obtained from the iGEM DNA distribution kit. The detection system is based on a competition assay. Cells that have high glyphosate resistance TO DO are marked orange, cells with moderate glyphosate resistance are marked blue and cells that cannot survive glyphosate treatment are marked green. Grown in medium without glyphosate, all cells show the same fitness. However, grown in medium with glyphosate, only adapted cells would survive, which could be detected by measuring the fluorescence.
+  </p>
+  <div class="article_picture ">
+    <img src="http://2018.igem.org/wiki/images/b/b0/T--Goettingen--design-product.png">
+    <p>This figure shows a possible application of our glyphosate detector. Fluorescence marked spores, in this case the green color indicates high glyphosate resistance, are propagated on a sample and cultivated. If there is a high glyphosate concentration within the sample, only the green marked cells can survive. If the glyphosate concentration is at a low level, the non-marked cells can survive, but are inhibited in their growth. When there is no glyphosate present, both strains will grow equally.</p>
+  </div>
+  <p>Such detection system as described in the figure above could also be used by customers, albeit the cells have to be observed with fluorescence detecting device. TO DO. Another option would be that customers could send their samples to a public laboratory company that uses our test kit for determining the glyphosate concentration.
+  </p>
+  <h4>Glyphosate degradation</h4>
+  <p>We conducted a survey and it brought our attention to another important topic within our project. People that are not into science questioned if it would be possible to degrade glyphosate with our detector-bacterium. To address this question, we searched in the literature for such a method and found in Castle&nbsp;et&nbsp;al.,&nbsp;2004 a solution: the glyphosate-acetyl-transferase (GAT) from <em>Bacillus&nbsp;licheniformis</em>. This enzyme N-acetylates glyphosate, which then has no herbicidal effect anymore (Franz et al.,&nbsp;1997). <em><strong>Unfortunately, we were currently not able to clone this resistant form into Bacillus!!!!</strong></em>
+  </p>
+  <hr>
+  <h2>References</h2>
+  <ol>
+    <li>Eschenburg, S., Healy, M.L., Priestman, M.A. et al. Planta (2002) 216: 129. https://doi.org/10.1007/s00425-002-0908-0</li>
+    <li>Franz, J.E. (1979) in: Adv. Pestic. Sci. Vol. 2, E. 139-147 (Geissbuehler, H. ed.) Pergamon, Oxford.
+    </li>
+    <li>Haslam, E. 1974 The Shikimate Pathway. Wiley, New York.
+    </li>
+    <li>Schönbrunn, E., Eschenburg, S., Shuttleworth, W.A., Schloss, J.V., Amrhein, N., Evans, J.N., and Kabsch, W. 2001. Interaction of the herbicide glyphosate with its target enzyme 5-enolpyruvylshikimate-3-phosphate synthase in atomic detail. <em>Proc Natl Acad Sci U S A </em> <strong>98: </strong>1376-80.
+    </li>
+  </ol>
 
 </div>

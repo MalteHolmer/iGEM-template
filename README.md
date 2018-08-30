@@ -1,6 +1,46 @@
 # iGEM-Template
 Template genutzt vom iGEM-Team Göttingen 2018, um das Team-Wiki zu füllen.
 
+## Wie man Texte auf der Website einfügt
+- wird eine neue Wiki-Seite angelegt ist diese zunächst leer, das sieht so aus:
+
+![enter image description here](https://lh3.googleusercontent.com/kbZZCZdlzH5t-zi-U49kuOcd50qCU4rw5TdKozgRPt8_4xvUoAiVZP4T0rPHJT5Q7ZKWq1iZsW-O9Q)
+
+- hier kann nun auf "Edit" geklickt werden, was in folgendes Menü führt:
+
+![enter image description here](https://lh3.googleusercontent.com/0Ge96zlp-O2Lkc9fiOK0-Aox1aHHNRZtDAgqf8I72EywRSlfFqwBVQQb4hwf8lI-w6o3yVmal9EGVQ)
+
+- um nun den Text hinzuzufügen, muss in dem Textfeld folgendes "Template" hinzugefügt werden:
+```
+{{Goettingen/Main}}
+<html>
+<body>
+<div class="site-content">
+
+</div>
+</body>
+</html>
+```
+![enter image description here](https://lh3.googleusercontent.com/GK80KGrpJt4X8ckuGilFGPaiCqqn9XVar7_FjLq3kuOSrPCPGrHID3p7tw1Kjr_GCfnT7YL1n2-XxA)
+
+- innerhlab des `<div class="site-content">` wird der Inhalt eingefügt, vergesst dabei nicht, dass alles in `<div class="article"></div>` gehüllt werden muss, damit die vorgegebenen Klassen funktionieren (Bilder mittig, links, rechts, Tabellen etc., **siehe unten**)
+##### Beispiel:
+```
+{{Goettingen/Main}}
+<html>
+<body>
+<div class="site-content">
+<div class="article">
+    <p>Hallo, ihr da draußen!</p>
+</div>
+</div>
+</body>
+</html>
+```
+![enter image description here](https://lh3.googleusercontent.com/JsPyeXW8ExG8t1udgvk-pp_uPp85Q-pNJtADUo7jv64YiED5Xzru6Yg6pmBTvge_0JZ8ubMEIlgeYA)
+
+![enter image description here](https://lh3.googleusercontent.com/hx8qOP14poPHDFlH_1LkQvIgHR41tyjIF9JpvrGIJ2jj9_fDKTz05Q_rD4DgqLuBwX2lcWvustZQNg)
+
 ## Übersicht über die wichtigsten HTML-Tags:
 
 ### Überschriften `<h1></h1>, <h2></h2>, <h3></h3>, <h4></h4>`
@@ -120,7 +160,7 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 - Dieser Tag wird nicht zum direkten Stylen benutzt und gibt mir eine Möglichkeit euch vorgefertigte Layouts zu bieten. Wie im nächsten Abschnitt und in der Beispieldatei zu sehen, muss zum Darstellen eines Bilds mit Bildunterschrift folgender `<div>` verwendet werden:
 ```
 <div class="article_picture article_picture-left">
-    <img src=URL ZUR BILDQUELLE">
+    <img src="URL ZUR BILDQUELLE">
     <p>picture-left</p>
 </div>
  ```
@@ -129,7 +169,6 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 
 ## Sonderzeichen
 Um Sonderzeichen in HTML einzufügen, reicht zu Zeiten von utf-8 (Kodierung für Unicode, eine Sammlung von Zeichen aller Sprachen &ndash; inkl. des asiatischen Raums) das simple einfügen des Zeichens über die Tastatur oder z.B. die Bildschirmtastatur, sollte dieses Zeichen nicht auf dem physikalischen Eingabe-Gerät vorhanden sein. Es gibt jedoch auch eine zweite, ebenso unterstütze Möglichkeit, der Einsatz von HTML-Entities. Diese stellen eine weitere Möglichkeit der Kodierung von Sonderzeichen da und werden von allen Browsern verstanden, an Stelle des Sonderzeichens wird einfach der HTML-Code eingefügt, der Browser übernimmt den Rest:
-
 |Sonderzeichen| HTML-Code |
 |--|--|
 | und (&) | `&amp;` |
@@ -138,9 +177,21 @@ Um Sonderzeichen in HTML einzufügen, reicht zu Zeiten von utf-8 (Kodierung für
 | von bis (12&ndash;15 mL) | `&ndash;` |
 | micro (&micro;) | `&micro;` |
 
+
 ## Übersicht über die Layout-`<div>`s
 `<div></div>`-Tags werden verwendet um Organisations- bzw. Layout-Abschnitte festzulegen. Das Layout innerhalb dieser Abschnitte kann über `css`-Befehle geändert werden, sodass am Ende jeder `<div></div>` mit einer bestimmten Klasse (z.B. `<div class="article_picture>INHALT</div>` immer dasselbe Layout ermöglicht. Einige praktische Layout-Klassen habe ich bereits vorbereitet, sollte etwas fehlen, fragt mich gerne und sagt mir was genau ihr braucht und ich gestalte diese.
 
+### WICHTIG!!!
+Alle von mir erstellten Klassen funktionieren nur, wenn sie in einem `<div class="article"></div>` verwendet werden, das sieht dann z.B. so aus:
+
+```
+<div class="article>
+    <div class="article_head-line">
+        <h2>head-line</h2>
+    </div>
+    <p>Hier könnte ihre Werbung stehen</p>
+</div>
+```
 ### Überschriften mit gelber Box
 - diese Überschrift stellt eine nette Möglickeit dar eine stark hervorgehobene Überschrift in Roberts Stil zu verwenden
 
@@ -161,7 +212,7 @@ Um Sonderzeichen in HTML einzufügen, reicht zu Zeiten von utf-8 (Kodierung für
 ##### Beispiel:
 ```
 <div class="article_picture">
-    <img src=URL ZUR BILDQUELLE">
+    <img src="URL ZUR BILDQUELLE">
     <p>picture</p>
 </div>
 ```
@@ -177,7 +228,7 @@ Um Sonderzeichen in HTML einzufügen, reicht zu Zeiten von utf-8 (Kodierung für
 ##### Beispiel:
 ```
 <div class="article_picture article_picture-left">
-    <img src=URL ZUR BILDQUELLE">
+    <img src="URL ZUR BILDQUELLE">
     <p>picture-left</p>
 </div>
 ```
@@ -193,7 +244,7 @@ Um Sonderzeichen in HTML einzufügen, reicht zu Zeiten von utf-8 (Kodierung für
 ##### Beispiel:
 ```
 <div class="article_picture article_picture-right">
-    <img src=URL ZUR BILDQUELLE">
+    <img src="URL ZUR BILDQUELLE">
     <p>picture-right</p>
  </div>
  ```
@@ -313,3 +364,6 @@ Um Sonderzeichen in HTML einzufügen, reicht zu Zeiten von utf-8 (Kodierung für
 </div>
 ```
 ![](https://lh3.googleusercontent.com/zL0kMMH4v9p6uIHxYCRSjXyhNA8TOWy24C0dKKBTMH9IKukLDeAqSQ4AjvCtFtL0O5vzTM-99CiSsQ "Formel")
+
+
+

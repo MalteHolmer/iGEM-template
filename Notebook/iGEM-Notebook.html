@@ -1,22 +1,41 @@
 <script src="Notebook/iGEM-Notebook.js"></script>
-<link rel="stylesheet" href="Notebook/iGEM-Notebook.css">
+<link rel="stylesheet"
+      href="Notebook/iGEM-Notebook.css">
 <div class="article">
-    <div class="article_head-line">
-        <h2>Our Labnotes:</h2>
+  <div class="article_head-line">
+    <h2>Our Labnotes:</h2>
+  </div>
+  <div id="notebook-menu">
+    <p>doctrina appellat cupidatat incididunt senserit quibusdam domesticarum eruditionem ea mentitum arbitrantur ullamco probant quae litteris tractavissent praesentibus quid voluptate commodo</p>
+    <div class="notebook-selection_div">
+      <div>
+        <p>Project:</p>
+        <select class="notebook-select"
+                name="project">
+          <option value="fluorophores">Fluorophores</option>
+          <option value="biobricks">Biobricks</option>
+          <option value="evolution">Evolution</option>
+          <option value="reporterSystems">Reporter-Systems</option>
+        </select>
+      </div>
+      <div>
+        <p>Month:</p>
+        <select class="notebook-select"
+                name="month">
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+    </select>
+      </div>
     </div>
-    <div id="notebook-menu">
-        <button class="notebook-menu-is-active">April</button>
-        <button>May</button>
-        <button>June</button>
-        <button>July</button>
-        <button>August</button>
-        <button>September</button>
-        <button>October</button>
-    </div>
-    <div class="notebook-dateselect">
-        <h3>April</h3>
-        <a>25.04.18 &ndash; 30.04.18</a>
-    </div>
-    <div id="notebook-display">
-    </div>
+    <button id="notebook-menu_submit">Submit</button>
+    <div style="clear: right"></div>
+  </div>
+  <hr id="seperation-ruler">
+  <div id="notebook-display">
+  </div>
 </div>

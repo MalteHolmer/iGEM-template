@@ -180,6 +180,7 @@ body {
 }
 
 #bodyContent #content_menu_wrapper {
+  position: relative;
   background-image: url("http://2018.igem.org/wiki/images/9/91/T--Goettingen--Main-Page-background.png");
   background-repeat: repeat;
   background-position: bottom;
@@ -196,13 +197,6 @@ body {
     background-position: bottom left;
     background-size: auto 100%;
     background-attachment: fixed;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  #bodyContent #content_menu_wrapper {
-    display: flex;
-    justify-content: space-between;
   }
 }
 
@@ -223,20 +217,21 @@ body {
 
 #bodyContent #navigation {
   display: block;
-  flex-basis: 20%;
+  width: 20%;
+  float: left;
   margin-bottom: 20%;
+  z-index: 999;
 }
 
 @media only screen and (max-width: 600px) {
   #bodyContent #navigation {
     display: block;
-    position: fixed;
-    top: 103px;
+    position: absolute;
+    top: 0px;
     left: 0px;
     width: 30%;
     border-bottom: 5px solid #5E5E5E;
     border-right: 5px solid #5E5E5E;
-    z-index: 999;
   }
   #bodyContent #navigation.is-nav-hidden {
     display: none;
@@ -244,10 +239,17 @@ body {
 }
 
 #bodyContent #main-content {
-  flex-basis: 80%;
+  width: 80%;
+  float: right;
   box-sizing: border-box;
   padding: 0.1px;
   /*Aus mir unbekannten Gründen, muss das Padding wohl angegeben werden, um das Hintergrund-Bild auf die ganze Seite zu spannen, entweder ein Bug oder ich bin da noch nicht ganz hinter gestiegen*/
+}
+
+@media only screen and (max-width: 600px) {
+  #bodyContent #main-content {
+    width: 100%;
+  }
 }
 
 #bodyContent #footer {
@@ -327,10 +329,11 @@ body {
 }
 
 #bodyContent #show_nav {
+  z-index: 1;
   display: none;
-  position: fixed;
+  position: absolute;
   left: 20px;
-  top: 122px;
+  top: 20px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -519,7 +522,11 @@ body {
 #bodyContent .article {
   margin: 10px;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#bodyContent .article a {
+  color: #B19A3A;
 }
 
 #bodyContent .article_head-line {
@@ -596,6 +603,7 @@ body {
 
 #bodyContent .article_multpicture img {
   width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
